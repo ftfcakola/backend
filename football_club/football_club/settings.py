@@ -18,6 +18,10 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='localhost,127.0.0.1,.vercel.app', cast=Csv())
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://backend-hbhr.onrender.com/",
+]
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
